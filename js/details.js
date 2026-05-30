@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     console.log(movie);
 
-    // 🎨 HERO BACKGROUND
+  
     document.getElementById("hero").style.backgroundImage =
       `url(${BACKDROP_URL + movie.backdrop_path})`;
 
-    // 🎞 POSTER
+  
     document.getElementById("poster").src =
       movie.poster_path
       ? IMAGE_URL + movie.poster_path
@@ -37,11 +37,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("title").textContent =
       movie.title || "No Title";
 
-    // ⭐ RATING
     document.getElementById("rating").textContent =
       "⭐ " + movie.vote_average.toFixed(1);
 
-    // 📅 YEAR
+   
     document.getElementById("year").textContent =
       "📅 " + (movie.release_date?.slice(0,4) || "N/A");
 
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         </span>
       `).join("");
 
-    // 📝 OVERVIEW
+   
     document.getElementById("overview").textContent =
       movie.overview || "No overview available.";
 
@@ -70,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     renderCast(castData.cast);
 
-    // ❤️ FAVOURITES BUTTON
+    
     const favBtn =
       document.getElementById("favBtn");
 
@@ -119,7 +118,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 
-// 🎭 RENDER CAST
+
 function renderCast(cast) {
 
   const container =

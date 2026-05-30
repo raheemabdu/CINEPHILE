@@ -82,7 +82,7 @@ searchInput.addEventListener("input", async (e)=>{
   displayMovies(data.results);
 });
 
-/* ❮ ❯ ARROWS (ONLY CONTROL SCROLL) */
+
 document.getElementById("scrollLeft").addEventListener("click", () => {
   moviesContainer.scrollBy({ left: -800, behavior: "smooth" });
 });
@@ -91,7 +91,6 @@ document.getElementById("scrollRight").addEventListener("click", () => {
   moviesContainer.scrollBy({ left: 800, behavior: "smooth" });
 });
 
-/* SHOW MORE TOGGLE */
 viewAllBtn.addEventListener("click", () => {
 
   showingAll = !showingAll;
@@ -105,7 +104,7 @@ viewAllBtn.addEventListener("click", () => {
   }
 });
 
-/* CURATED IMAGES */
+
 const images = [
   "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
   "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c",
